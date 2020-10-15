@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_base/app/base/controller.dart';
 import 'package:get/get.dart';
 
-abstract class View<T extends Controller> extends GetView<T> {
+abstract class ViewStateLess<T extends Controller> extends GetView<T> {
   @override
   Widget build(BuildContext context) {
     return WillPopScope(child: buildPage(), onWillPop: willPopCallBack);
@@ -11,7 +11,6 @@ abstract class View<T extends Controller> extends GetView<T> {
   Widget buildPage();
 
   Future<bool> willPopCallBack() async {
-
     return true;
   }
 }

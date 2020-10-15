@@ -30,7 +30,6 @@ dependencies:
   cupertino_icons: ^1.0.0
   get:
   dio:
-  logging:
   google_fonts:
 
 dev_dependencies:

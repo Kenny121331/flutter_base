@@ -1,14 +1,17 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_base/app/base/view.dart';
+import 'package:flutter_base/app/base/state_view.dart';
 import 'package:get/get.dart';
 
 import '../home_controller.dart';
 
-class CountryView extends View<HomeController> {
+class CountryView extends View {
+  @override
+  _CountryViewState createState() => _CountryViewState();
+}
 
-
+class _CountryViewState extends ViewState<CountryView, HomeController> {
   @override
   Widget buildPage() {
     return Container(
@@ -45,7 +48,7 @@ class CountryView extends View<HomeController> {
                       ),
                       title: Text(country.country),
                       subtitle:
-                          Text("Total infecteds: ${country.totalConfirmed}"),
+                      Text("Total infecteds: ${country.totalConfirmed}"),
                     );
                   }),
             ),

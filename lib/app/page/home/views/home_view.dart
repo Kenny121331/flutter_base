@@ -6,13 +6,13 @@ import 'package:get/get.dart';
 
 import '../home_controller.dart';
 
-class HomeView extends View<HomeController> {
-
+class HomeView extends ViewStateLess<HomeController> {
   @override
   Future<bool> willPopCallBack() {
     // TODO: implement willPopCallBack
     return super.willPopCallBack();
   }
+
   @override
   Widget buildPage() {
     return Container(
